@@ -37,6 +37,13 @@ body{
   align-items:center;
 }
 
+.field small{
+  white-space:nowrap;   /* impede quebra de linha */
+  font-weight:400;      /* remove negrito */
+  font-style:normal;    /* remove itálico */
+  color:#8aa3c7;        /* mantém padrão visual */
+}
+
 select{
   height:44px;
   border-radius:12px;
