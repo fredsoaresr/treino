@@ -38,10 +38,20 @@ body{
 }
 
 .field small{
-  white-space:nowrap;   /* impede quebra de linha */
-  font-weight:400;      /* remove negrito */
-  font-style:normal;    /* remove itálico */
-  color:#8aa3c7;        /* mantém padrão visual */
+  display:block;
+  margin-top:6px;
+
+  font-size:13px;
+  font-weight:400;
+  font-style:italic;
+
+  color:#9fb8d9;
+
+  padding-left:2px;
+  border-left:2px solid rgba(0,212,255,0.3);
+  padding-left:8px;
+
+  line-height:1.4;
 }
 
 select{
