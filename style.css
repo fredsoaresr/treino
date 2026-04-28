@@ -29,6 +29,14 @@ body{
   padding:32px;
 }
 
+.actions{
+  grid-column:span 3;
+  display:flex;
+  gap:12px;
+  flex-wrap:nowrap; /* NÃO deixa quebrar */
+  align-items:center;
+}
+
 /* HERO */
 .hero{
   display:flex;
