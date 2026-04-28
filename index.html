@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Threshold Training Pace App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Swimming Threshold Calculator</p>
+        <h1>Threshold Training Pace App</h1>
+        <p class="sub">Aplicação baseada na lógica da planilha “Jon's Threshold App Master 2.2”: entrada de teste, cálculo do T‑30 pace e geração de ritmos de treino por zona e distância.</p>
+      </div>
+      <div class="hero-card">
+        <span>White</span><span>Pink</span><span>Red</span><span>Blue</span><span>Purple</span>
+      </div>
+    </section>
+
+    <section class="panel grid">
+      <div class="field">
+        <label for="name">Nome do atleta</label>
+        <input id="name" placeholder="Ex.: João Gabriel" />
+      </div>
+      <div class="field">
+        <label for="stroke">Estilo</label>
+        <select id="stroke">
+          <option value="FR">Livre / FR</option>
+          <option value="FLY">Borboleta / FLY</option>
+          <option value="BK">Costas / BK</option>
+          <option value="BR">Peito / BR</option>
+          <option value="IM">Medley / IM</option>
+        </select>
+      </div>
+      <div class="field wide">
+        <label for="testType">Tipo de cálculo</label>
+        <select id="testType"></select>
+      </div>
+      <div class="field">
+        <label for="time">Tempo ou pace</label>
+        <input id="time" placeholder="Ex.: 3:52.00, 352, 31:21 ou 3121" />
+        <small>Sem dois-pontos também funciona: 352 = 3:52; 105.5 = 1:05.5.</small>
+      </div>
+      <div class="field">
+        <label for="pool">Piscina</label>
+        <select id="pool">
+          <option value="SCY">Jardas / SCY</option>
+          <option value="SCM">25m / SCM</option>
+          <option value="LCM">50m / LCM</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button id="calculate">Calcular</button>
+        <button id="addAthlete" class="secondary">Adicionar à lista</button>
+        <button id="clear" class="ghost">Limpar lista</button>
+      </div>
+    </section>
+
+    <section class="summary" id="summary">
+      <div class="kpi">
+        <span>Atleta</span>
+        <strong id="kpiName">—</strong>
+      </div>
+      <div class="kpi">
+        <span>T‑30 pace / 100</span>
+        <strong id="kpiPace">—</strong>
+      </div>
+      <div class="kpi">
+        <span>Tipo</span>
+        <strong id="kpiType">—</strong>
+      </div>
+      <div class="kpi">
+        <span>Base em segundos</span>
+        <strong id="kpiSeconds">—</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <div>
+          <h2>Ritmos por zona</h2>
+          <p>Valores equivalentes às zonas da planilha, com FC de 10 segundos entre parênteses.</p>
+        </div>
+        <button id="exportCsv" class="secondary">Exportar CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table id="paceTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <div>
+          <h2>Atletas calculados</h2>
+          <p>Use para comparar diferentes entradas antes de imprimir ou exportar.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="athletesTable">
+          <thead>
+            <tr><th>Nome</th><th>Estilo</th><th>Teste</th><th>Entrada</th><th>T‑30 / 100</th><th>White 100</th><th>Red 100</th><th>Purple 100</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
