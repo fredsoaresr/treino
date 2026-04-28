@@ -37,6 +37,15 @@ body{
   align-items:center;
 }
 
+select{
+  color:#0a2540;
+}
+
+select option{
+  color:#0a2540;
+  background:#ffffff;
+}
+
 /* HERO */
 .hero{
   display:flex;
